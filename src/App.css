@@ -1,0 +1,40 @@
+
+/* /////////////////////////////////////// */
+.custom-audio-player {
+    -webkit-appearance: none;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+  }
+  
+  .custom-audio-player::-webkit-media-controls-panel {
+    background-color: #1f2937; /* Dark gray */
+    border-radius: 12px;
+  }
+  
+  .custom-audio-player::-webkit-media-controls-play-button,
+  .custom-audio-player::-webkit-media-controls-volume-slider,
+  .custom-audio-player::-webkit-media-controls-seek-back-button,
+  .custom-audio-player::-webkit-media-controls-seek-forward-button {
+    filter: invert(100%);
+    transform: scale(1.2); /* Slightly increase size */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .custom-audio-player::-webkit-media-controls-play-button:hover,
+  .custom-audio-player::-webkit-media-controls-volume-slider:hover,
+  .custom-audio-player::-webkit-media-controls-seek-back-button:hover,
+  .custom-audio-player::-webkit-media-controls-seek-forward-button:hover {
+    transform: scale(1.4); /* Increase size on hover */
+  }
+  
+  .custom-audio-player::-webkit-media-controls-timeline-container {
+    height: 10px;
+    border-radius: 5px;
+  }
+  
+  .custom-audio-player::-webkit-media-controls-timeline {
+    background-color: #34d399; /* Green for progress bar */
+    border-radius: 5px;
+  }
+  
