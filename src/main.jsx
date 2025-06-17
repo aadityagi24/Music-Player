@@ -1,18 +1,16 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { createHashRouter, RouterProvider } from "react-router-dom";
+import { Provider } from 'react-redux';
+
 import App from './App.jsx';
-import {
-  createHashRouter,
-  RouterProvider,
-} from "react-router-dom";
-import './index.css';
 import Main from './components/Main.jsx';
 import Songs from './components/Songs/Songs.jsx';
 import SongDetails from './components/Songs/SongDetails.jsx';
 import Liked from './components/Songs/Liked.jsx';
 import { store } from './store/store.jsx';
-import { Provider } from 'react-redux';
 
+// ✅ Use HashRouter with unique children — NO DUPLICATES!
 const router = createHashRouter([
   {
     path: "/",
@@ -23,8 +21,8 @@ const router = createHashRouter([
       { path: "/Playlist", element: <Songs /> },
       { path: "/songDetails/:id", element: <SongDetails /> },
       { path: "/liked", element: <Liked /> },
-    ]
-  }
+    ],
+  },
 ]);
 
 createRoot(document.getElementById('root')).render(
