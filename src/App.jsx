@@ -17,12 +17,12 @@ function App() {
         </Sidebar>
       </div>
 
-      {/* Main Content */}
+      {/* Main */}
       <div className="flex-grow px-4 py-6 overflow-auto">
         <Outlet />
       </div>
 
-      {/* Right Info Panels */}
+      {/* Right */}
       <div className="w-[23%]">
         <SongInfo />
         <ExploreInfo />
