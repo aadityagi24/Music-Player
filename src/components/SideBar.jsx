@@ -10,7 +10,7 @@ export default function Sidebar({ children }) {
   return (
     <aside className="h-screen bg-gray-900 text-white shadow-lg">
       <nav className="h-full flex flex-col border-r border-gray-800">
-        {/* Logo + Toggle */}
+        {/* Logo & Toggle */}
         <div className="p-4 pb-2 flex justify-between items-center">
           <img
             src="BeatFlow_Logo.jpg"
@@ -27,7 +27,6 @@ export default function Sidebar({ children }) {
           </button>
         </div>
 
-        {/* Sidebar Items */}
         <SidebarContext.Provider value={{ expanded }}>
           <ul className="flex-1 px-3 space-y-1">{children}</ul>
         </SidebarContext.Provider>
@@ -58,7 +57,6 @@ export function SidebarItem({ icon, text, path, active, alert }) {
         {text}
       </span>
 
-      {/* Optional Alert Dot */}
       {alert && (
         <div
           className={`absolute right-2 w-2 h-2 rounded-full bg-green-400 ${
@@ -67,7 +65,6 @@ export function SidebarItem({ icon, text, path, active, alert }) {
         />
       )}
 
-      {/* Tooltip when collapsed */}
       {!expanded && (
         <span
           className={`absolute left-full whitespace-nowrap rounded-md px-2 py-1 ml-4 bg-gray-700 text-gray-100 text-xs opacity-0 invisible translate-x-2 group-hover:opacity-100 group-hover:visible group-hover:translate-x-0 transition-all`}
