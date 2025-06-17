@@ -5,7 +5,6 @@ import Sidebar, { SidebarItem } from "./components/SideBar"
 import SongInfo from './components/SongInfo'
 import ExploreInfo from './components/Explore/ExploreInfo';
 import { Outlet } from 'react-router-dom';
-import { HashRouter as Router } from 'react-router-dom';
 
 
 
